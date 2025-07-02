@@ -205,20 +205,6 @@
     transform: translateY(10%);
 }
 
-
-.cursor-dragonball, .cursor-naruto{
-  height: 500px;
-  width: 500px;
-}
-.cursor-dragonball:hover {
-  cursor: url('../img/dragon_ball_cursor-removebg-preview.png'), auto;
-}
-
-.cursor-naruto:hover {
-  cursor: url('../img/naruto_cursor-removebg-preview.png'), auto;
-}
-
-
 .imagenes-transicion {
   display: block;
 }
