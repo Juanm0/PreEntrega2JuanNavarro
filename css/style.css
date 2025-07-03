@@ -1,5 +1,4 @@
-
-*{
+* {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -8,7 +7,7 @@
 
 /* Estilos Header */
 
-.nav-celular{
+.nav-celular {
   background-color: #00FF80;
   display: none;
 }
@@ -75,7 +74,7 @@
   background: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
+
 }
 
 .item img {
@@ -89,25 +88,17 @@
   margin: 10px 0 5px;
 }
 
-.precio {
-  color: rgb(1, 132, 1);
-  font-size: 1.2rem;
-}
-
 .oferta {
   color: rgb(255, 0, 0);
   font-size: 0.9rem;
 }
 
-.oferta, .precio, .titulo {
+.oferta,
+.precio,
+.titulo {
   text-align: center;
   margin-bottom: 5px
 }
-
-.carousel-control-prev, .carousel-control-next{
-  color: #00FF80 !important;
-}
-
 
 
 /* Footer */
@@ -149,60 +140,59 @@
 
 /* Estilos de la transicion de imagenes */
 
-.imagenes-transicion{
-    position: relative;
-    width: 512px;
-    height: 400px;
-    transition: all 0.3s ease;
+.imagenes-transicion {
+  position: relative;
+  width: 512px;
+  height: 400px;
+  transition: all 0.3s ease;
 }
 
-.imagenes-transicion img:first-child{
-    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
-    border-radius: 4px;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.imagenes-transicion img:first-child {
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.imagenes-transicion img:last-child{
-    position: absolute;
-    width: 512px;
-    height: 500px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(25%);
-    transition: 0.3s ease;
-    opacity: 0;
-    border-radius: 4px;
+.imagenes-transicion img:last-child {
+  position: absolute;
+  width: 512px;
+  height: 500px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+  border-radius: 4px;
 }
 
-.imagenes-transicion:hover{
-    transform: perspective(250px) rotateX(10deg)
-    translateY(-5%) translateZ(0);
+.imagenes-transicion:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
 }
 
-.imagenes-transicion::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-image: 
+.imagenes-transicion::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image:
     linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0) 95%);
-    opacity: 0;
-    transition: all 0.3s ease;
+      rgba(0, 0, 0) 95%);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
-.imagenes-transicion:hover::before{
-    opacity: 1;
+.imagenes-transicion:hover::before {
+  opacity: 1;
 }
 
-.imagenes-transicion:hover img:last-child{
-    opacity: 1;
-    transform: translateY(10%);
+.imagenes-transicion:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
 }
 
 .imagenes-transicion {
@@ -213,18 +203,69 @@
   display: none;
 }
 
+.btn-custom {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Main Productos */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-name {
+  font-size: 1.1em;
+  margin: 10px 0 5px;
+}
+
+.product-price {
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
 @media screen and (max-width: 768px) {
   .imagenes-transicion {
     display: none;
   }
 
-  .navbar-custom{
+  .navbar-custom {
     display: none;
   }
 
-  .nav-celular{
+  .nav-celular {
     display: block;
-}
+  }
 
   .imagen-celular {
     display: block;
@@ -238,7 +279,7 @@
     display: block !important;
   }
 
-  .footer{
+  .footer {
     padding: 30px;
   }
 
