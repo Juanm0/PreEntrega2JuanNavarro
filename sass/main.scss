@@ -1,0 +1,11 @@
+//Abstracts
+@use './abstracts/variables';
+
+//Base
+@use './base/resets';
+
+//Layout
+@use './layout/header';
+@use './layout/_indexMain';
+//Components
+@use './components/indexMainDecoration';

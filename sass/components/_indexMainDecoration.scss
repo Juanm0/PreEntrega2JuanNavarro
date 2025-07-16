@@ -1,0 +1,79 @@
+@use '../abstracts/variables';
+
+.imagenes-transicion {
+  position: relative;
+  width: variables.$ancho-imagen;
+  height: 400px;
+  transition: all 0.3s ease;
+}
+
+.imagenes-transicion img:first-child {
+  box-shadow: 0 60px 60px -60px variables.$color-sombra-azul;
+  border-radius: variables.$radius-default;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.imagenes-transicion img:last-child {
+  position: absolute;
+  width: variables.$ancho-imagen;
+  height: 500px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+  border-radius: variables.$radius-default;
+}
+
+.imagenes-transicion:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.imagenes-transicion::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image:
+    linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%,
+      variables.$color-negro 95%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.imagenes-transicion:hover::before {
+  opacity: 1;
+}
+
+.imagenes-transicion:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+.imagenes-transicion {
+  display: block;
+}
+
+.imagen-celular {
+  display: none;
+}
+
+.btn-custom {
+  background: linear-gradient(135deg, variables.$color-azul1, variables.$color-azul2);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: variables.$padding-btn;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
