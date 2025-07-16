@@ -1,11 +1,16 @@
 //Abstracts
 @use './abstracts/variables';
-
 //Base
 @use './base/resets';
-
-//Layout
-@use './layout/header';
-@use './layout/_indexMain';
 //Components
 @use './components/indexMainDecoration';
+//Layout
+@use './layout/header';
+@use './layout/indexMain';
+@use './layout/productosMain';
+@use './layout/cursosMain';
+@use './layout/aboutMain';
+@use './layout/footer';
+//Media Queries
+@use './mq/mediaQuerys';
+
