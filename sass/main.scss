@@ -1,9 +1,12 @@
 //Abstracts
-@use './abstracts/variables';
+@use './utilities/variables';
+@use './utilities/extends';
+@use './utilities/mixins';
 //Base
 @use './base/resets';
 //Components
 @use './components/indexMainDecoration';
+@use './components/goTopButton';
 //Layout
 @use './layout/header';
 @use './layout/indexMain';

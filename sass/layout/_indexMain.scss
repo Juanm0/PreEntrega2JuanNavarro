@@ -1,8 +1,9 @@
-@use '../abstracts/variables';
+@use '../utilities/variables';
+@use '../utilities/extends';
 
-
+/* Main Index */
 .subtitulo-ofertas {
-  text-align: center;
+  @extend %centrado-texto;
   color: #222;
 }
 
@@ -35,6 +36,5 @@
 .oferta,
 .precio,
 .titulo {
-  text-align: center;
-  margin-bottom: 5px
+  @extend %centrado-texto;
 }

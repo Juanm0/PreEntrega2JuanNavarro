@@ -1,4 +1,5 @@
-@use '../abstracts/variables';
+@use '../utilities/variables';
+@use '../utilities/mixins';
 
 
 /* Main Productos */
@@ -20,7 +21,7 @@
 .product-card img {
   max-width: 100%;
   height: auto;
-  border-radius: variables.$radius-default;
+  @include mixins.border-radius-default;
 }
 
 .product-name {
