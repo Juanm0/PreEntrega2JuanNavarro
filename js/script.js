@@ -27,7 +27,8 @@ function suma(numeroA, numeroB) {
 }
 
 function menu() {
-    let opcion = prompt("--------------------------\n" +
+    let opcion
+    opcion = prompt("--------------------------\n" +
         "CALCULADORA\n" +
         "--------------------------\n" +
         "1) Suma\n" +
@@ -35,10 +36,15 @@ function menu() {
         "3) Multiplicacion\n" +
         "4) Division\n" +
         "Ingrese la operacion que quiera realizar: ")
-
-    let num1 = parseFloat(prompt("Ingrese el primer número: "))
-    let num2 = parseFloat(prompt("Ingrese el segundo número: "))
     opcion = Number(opcion)
+    let num1
+    let num2
+    if (opcion >= 1 && opcion <= 4){
+        num1 = parseFloat(prompt("Ingrese el primer número: "))
+        num2 = parseFloat(prompt("Ingrese el segundo número: "))
+    }
+    
+    
     switch (opcion) {
         case 1:
             suma(num1, num2)
