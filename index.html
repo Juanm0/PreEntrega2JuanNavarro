@@ -1,80 +1,84 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Calculadora - Entregable 2</title>
-<link rel="stylesheet" href="./css/style.css">
-<script src="./js/script.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora - Entregable 2</title>
+    <link rel="icon" type="image/png" href="./img/calculator_46872.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
 </head>
+
 <body>
-<header class="site-header">
-<img src="img/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'" />
-<h1>Calculadora interactiva</h1>
-<p class="sub">Entrega 2 - Integración JS + DOM + localStorage</p>
-</header>
+    <header class="site-header">
+        <img src="img/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'" />
+        <h1>Calculadora interactiva</h1>
+        <p class="sub">Entrega 2 - Integración JS + DOM + localStorage</p>
+    </header>
 
 
-<main class="container">
-<section class="calculator-card">
-<form id="calculatorForm" class="calculator-form" autocomplete="off">
-<div class="row">
-<label for="valorA">Valor A</label>
-<input id="valorA" name="valorA" type="number" step="any" required />
-</div>
+    <main class="container">
+        <section class="calculator-card">
+            <form id="calculatorForm" class="calculator-form" autocomplete="off">
+                <div class="row">
+                    <label for="valorA">Valor A</label>
+                    <input id="valorA" name="valorA" type="number" step="any" required />
+                </div>
 
 
-<div class="row">
-<label for="valorB">Valor B</label>
-<input id="valorB" name="valorB" type="number" step="any" required />
-</div>
+                <div class="row">
+                    <label for="valorB">Valor B</label>
+                    <input id="valorB" name="valorB" type="number" step="any" required />
+                </div>
 
 
-<div class="row">
-<label for="operacion">Operación</label>
-<select id="operacion" name="operacion">
-<option value="sum">Suma (+)</option>
-<option value="sub">Resta (-)</option>
-<option value="mul">Multiplicación (x)</option>
-<option value="div">División (÷)</option>
-<option value="pow">Potencia (a^b)</option>
-<option value="mod">Módulo (a % b)</option>
-</select>
-</div>
+                <div class="row">
+                    <label for="operacion">Operación</label>
+                    <select id="operacion" name="operacion">
+                        <option value="sum">Suma (+)</option>
+                        <option value="sub">Resta (-)</option>
+                        <option value="mul">Multiplicación (x)</option>
+                        <option value="div">División (÷)</option>
+                        <option value="pow">Potencia (a^b)</option>
+                        <option value="mod">Módulo (a % b)</option>
+                    </select>
+                </div>
 
 
-<div class="actions">
-<button id="calcularBtn" type="submit">Calcular</button>
-<button id="limpiarFormBtn" type="button">Limpiar</button>
-</div>
-</form>
+                <div class="actions">
+                    <button id="calcularBtn" type="submit">Calcular</button>
+                    <button id="limpiarFormBtn" type="button">Limpiar</button>
+                </div>
+            </form>
 
 
-<section class="result-box" aria-live="polite">
-<h2>Resultado</h2>
-<div id="resultado" class="resultado">-</div>
-</section>
+            <section class="result-box" aria-live="polite">
+                <h2>Resultado</h2>
+                <div id="resultado" class="resultado">-</div>
+            </section>
 
 
-</section>
+        </section>
 
 
-<aside class="history-card">
-<div class="history-header">
-<h2>Historial</h2>
-<div>
-<button id="exportJsonBtn" type="button">Exportar JSON</button>
-<button id="clearHistoryBtn" type="button">Borrar historial</button>
-</div>
-</div>
-<ul id="historyList" class="history-list" aria-live="polite"></ul>
-</aside>
-</main>
+        <aside class="history-card">
+            <div class="history-header">
+                <h2>Historial</h2>
+                <div>
+                    <button id="exportJsonBtn" type="button">Exportar JSON</button>
+                    <button id="clearHistoryBtn" type="button">Borrar historial</button>
+                </div>
+            </div>
+            <ul id="historyList" class="history-list" aria-live="polite"></ul>
+        </aside>
+    </main>
 
 
-<footer class="site-footer">
-<small>Proyecto: Entregable2 - Navarro. Hecho con DOM y localStorage.</small>
-</footer>
+    <footer class="site-footer">
+        <small>Proyecto: Entregable2 - Navarro. Hecho con DOM y localStorage.</small>
+    </footer>
 
 </body>
+
 </html>
