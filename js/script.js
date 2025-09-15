@@ -190,7 +190,7 @@ exportJsonBtn.addEventListener('click', function () {
 });
 
 
-// opcional: cargar historial al inicio (ya ejecutado arriba). Acá se ofrece una función pública por si se necesita re-render
+// opcional: cargar historial al inicio (ya ejecutado arriba). 
 window.reloadHistory = function () {
     historial = loadHistoryFromStorage();
     renderHistory(historial);
