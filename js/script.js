@@ -55,7 +55,7 @@ function formatOperationText(op) {
     switch (op) {
         case 'sum': return '+';
         case 'sub': return '-';
-        case 'mul': return '×';
+        case 'mul': return 'x';
         case 'div': return '÷';
         case 'pow': return '^';
         case 'mod': return '%';
