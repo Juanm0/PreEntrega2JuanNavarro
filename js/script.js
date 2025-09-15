@@ -10,3 +10,23 @@ const exportJsonBtn = document.getElementById('exportJsonBtn');
 const limpiarFormBtn = document.getElementById('limpiarFormBtn');
 
 
+// Key para localStorage
+const STORAGE_KEY = 'entregable2_calculadora_historial_v1';
+
+
+// Carga inicial del historial desde storage
+let historial = loadHistoryFromStorage();
+renderHistory(historial);
+
+
+// --- Funciones utilitarias ---
+function createCalculationObject(a, b, operation, result) {
+return {
+id: Date.now(),
+timestamp: new Date().toISOString(),
+a: Number(a),
+b: Number(b),
+operation,
+result
+};
+}
