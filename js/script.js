@@ -19,7 +19,7 @@ let historial = loadHistoryFromStorage();
 renderHistory(historial);
 
 
-// --- Funciones utilitarias ---
+// Funciones utilitarias
 function createCalculationObject(a, b, operation, result) {
     return {
         id: Date.now(),
